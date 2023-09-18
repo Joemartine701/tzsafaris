@@ -5,7 +5,13 @@ from django.conf import settings
 from backend.models.tour_model import TourModel
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import get_object_or_404
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework.decorators import authentication_classes, api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 
+@api_view(['POST','GET','PUT','DELETE'])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
 @csrf_exempt
 def tour(request, tour_id=None):
     if request.method == 'POST':
