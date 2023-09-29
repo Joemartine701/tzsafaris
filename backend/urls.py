@@ -1,5 +1,6 @@
 from django.urls import path
 
+from .views.components.sms_views import sms
 from .views.components.tour_views import tour
 from .views.auth_views import edit_user, login, register, update_user
 from django.conf import settings
@@ -12,6 +13,7 @@ urlpatterns =[
     path('api/sign-in', login, name='sign-in'),
     path('api/tour', tour, name='tour'),
     path('api/tour/<int:tour_id>/', tour, name='tour'),
+    path('api/sms', sms, name='sms'),
 ]
 
 if settings.DEBUG:
