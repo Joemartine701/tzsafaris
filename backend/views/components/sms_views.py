@@ -12,14 +12,14 @@ def sms(request):
             url = "https://messaging-service.co.tz/api/sms/v1/test/text/single"
 
             payload = json.dumps({
-                "from": "TWENZETU SF",
-                "to": "255765009881",
+                "from": "*******",
+                "to": "*******",
                 "text": "Hello from Safari",
                 "reference": "aswqetgcv"
             })
 
             headers = {
-                'Authorization': 'Basic RW1pbGlhbjpFbWlsaW5pYzEyLg==',
+                'Authorization': 'Basic ***********',
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             }
@@ -31,18 +31,17 @@ def sms(request):
 
             payload = json.dumps({
                 "messages":[{
-                    "from": "TWENZETU SF",
+                    "from": "*******",
                     "to": [
-                    "255789117527",
-                    "255765009881",
-                    "255782913983"
+                    "255****",
+                    "255*****"
                     ],
                     "text": "from Safari backend"}],
                     "reference": "aswqetgcv"
             })
 
             headers = {
-                'Authorization': 'Basic RW1pbGlhbjpFbWlsaW5pYzEyLg==',
+                'Authorization': 'Basic ********',
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             }
@@ -54,18 +53,17 @@ def sms(request):
 
             payload = json.dumps({
                 "messages":[{
-                    "from": "TWENZETU SF",
+                    "from": "********",
                     "to": [
-                    "255789117527",
-                    "255765009881",
-                    "255782913983"
+                    "255*******",
+                    "255*******"
                     ],
                     "text": "from Safari backend"}],
                     "reference": "aswqetgcv"
             })
 
             headers = {
-                'Authorization': 'Basic RW1pbGlhbjpFbWlsaW5pYzEyLg==',
+                'Authorization': 'Basic *********',
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             }
